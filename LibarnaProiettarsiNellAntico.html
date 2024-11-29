@@ -113,7 +113,8 @@ function setup3dhop() {
 
 	presenter.setScene({
 		meshes: {
-			"mesh_1" : { url: "models/Libarna-Isolati.obj" }  //cambio il modello
+			"mesh_1" : { url: "models/Libarna-Isolati.obj" }
+			onError: (error) => { console.error("Errore caricamento modello:", error); }
 		},
 		modelInstances : {
 			"model_1" : { 
